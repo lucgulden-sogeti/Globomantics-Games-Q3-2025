@@ -2,7 +2,7 @@ name: Build and deploy web game
 
 on:
   workflow_run:
-    workflows: ["CodeQL Analysis"]
+    workflows: ["Build and scan project with CodeQL"]
     types:
       - completed
     branches:
