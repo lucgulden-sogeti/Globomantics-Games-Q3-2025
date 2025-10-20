@@ -1,8 +1,10 @@
 name: "Build and scan project with CodeQL"
 
 on:
+  push:
+    branches: [develop]
   pull_request:
-    branches: [ main ]
+    branches: [ main, recette ]
 
 jobs:
   pre-check:
