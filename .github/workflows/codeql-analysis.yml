@@ -5,8 +5,16 @@ on:
     branches: [ main ]
 
 jobs:
+  pre-check:
+    name: Pre-check validation
+    runs-on: ubuntu-latest
+    steps:
+      - name: Vérification initiale
+        run: echo "Pré-vérification terminée."
+
   analyze:
     name: analyze
+    needs: pre-check
     runs-on: ubuntu-latest
     permissions:
       actions: read
